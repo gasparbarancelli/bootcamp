@@ -3,3 +3,14 @@ h1 {
     font-weight: bold;
     font-size: 20px;
 }
+table {
+    background-color: chocolate;
+    color: #FFF;
+}
+th {
+    font-size: 1.3em;
+    border-bottom: 1px solid #CCC;
+}
+th, td {
+    padding: 5px;
+}

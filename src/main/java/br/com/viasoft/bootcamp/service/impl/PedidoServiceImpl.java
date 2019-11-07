@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 @Service
 public class PedidoServiceImpl extends CrudServiceImpl<Pedido, Long> implements PedidoService {
@@ -62,5 +63,10 @@ public class PedidoServiceImpl extends CrudServiceImpl<Pedido, Long> implements 
         pedidoItem.setPedido(pedido);
         pedido.getPedidoItemList().add(pedidoItem);
         System.out.println(new ObjectMapper().writeValueAsString(pedido));
+    }
+
+    @Override
+    public List<Pedido> findByClienteId(Long clienteId) {
+        return pedidoData.findByClienteId(clienteId);
     }
 }
