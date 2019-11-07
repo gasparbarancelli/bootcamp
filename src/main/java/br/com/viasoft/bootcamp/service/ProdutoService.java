@@ -9,4 +9,7 @@ public interface ProdutoService extends CrudService<Produto, Long> {
 
     List<Produto> complete(String descricao);
 
+    Produto produtosMaisVendidos();
+
+
 }

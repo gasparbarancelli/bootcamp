@@ -44,6 +44,11 @@ public class ClienteServiceImpl extends CrudServiceImpl<Cliente, Long> implement
         return clienteData.findByNomeContaining(nome, PageRequest.of(0, 20));
     }
 
+    @Override
+    public List<Cliente> clientesQueCompraramProduto(Long idProduto) {
+        return clienteData.clientesQueCompraramProduto(idProduto);
+    }
+
     public List<Cliente> startingWith(String nome) {
         return clienteData.findByNomeStartingWith(nome, PageRequest.of(0, 20));
     }

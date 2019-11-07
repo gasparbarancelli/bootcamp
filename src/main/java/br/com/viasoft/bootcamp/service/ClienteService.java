@@ -9,4 +9,5 @@ public interface ClienteService extends CrudService<Cliente, Long> {
 
     List<Cliente> complete(String nome);
 
+    List<Cliente> clientesQueCompraramProduto(Long idProduto);
 }

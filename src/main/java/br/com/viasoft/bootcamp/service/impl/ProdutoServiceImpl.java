@@ -29,4 +29,8 @@ public class ProdutoServiceImpl extends CrudServiceImpl<Produto, Long> implement
         return produtoData.findByDescricaoContaining(descricao, PageRequest.of(0, 20));
     }
 
+    @Override
+    public Produto produtosMaisVendidos() {
+        return produtoData.produtosMaisVendidos();
+    }
 }

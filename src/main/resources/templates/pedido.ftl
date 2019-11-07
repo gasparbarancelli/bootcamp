@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>Pedidos</h1>
+    <h1>Pedido do cliente ${cliente.nome}</h1>
     <table>
         <thead>
         <tr>
@@ -26,10 +26,9 @@
         </tr>
         </thead>
         <tbody>
-        <#list pedidoList as pedido>
             <tr bgcolor="gray">
                 <td>
-                   <a href="/screen-pedido/por-id/${pedido.id}" target="_blank">${pedido.id}</a>
+                    ${pedido.id}
                 </td>
                 <td>
                     ${pedido.cliente.nome}
@@ -87,7 +86,6 @@
                     </table>
                 </td>
             </tr>
-        </#list>
         </tbody>
     </table>
 </div>

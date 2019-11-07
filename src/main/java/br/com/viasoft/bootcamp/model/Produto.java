@@ -25,6 +25,10 @@ public class Produto {
     @Column(name = "VALOR_UNITARIO", nullable = false)
     private BigDecimal valorUnitario;
 
+    public String getConcatenar() {
+        return "Id: " + id + " - descricao: " + descricao;
+    }
+
     public Produto(Long id) {
         this.id = id;
     }
